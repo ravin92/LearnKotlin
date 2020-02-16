@@ -6,6 +6,13 @@ class ModelRegistration {
         set(value) {
             field = value
         }
+
+    var gender : String = ""
+        get() = field
+        set(value) {
+            field = value
+        }
+
     var email : String = ""
         get() = field
         set(value) {
@@ -17,17 +24,13 @@ class ModelRegistration {
             field = value
         }
 
-    var gender : String = ""
-        get() = field
-        set(value) {
-            field = value
-        }
 
 
     /*constructor(name:String,email:String,password:String){
         this.name = name
         this.email = email
         this.password = password
+        this.gender = gender
     }*/
 
 
