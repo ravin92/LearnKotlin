@@ -17,6 +17,12 @@ class ModelRegistration {
             field = value
         }
 
+    var gender : String = ""
+        get() = field
+        set(value) {
+            field = value
+        }
+
 
     /*constructor(name:String,email:String,password:String){
         this.name = name
