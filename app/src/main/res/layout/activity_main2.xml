@@ -60,12 +60,13 @@
             android:layout_weight="1"
             android:hint="Input Your Email"
             android:textColor="#FFF"
-            android:textColorHint="#FFF" />
+            android:textColorHint="#FFF"/>
+
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll_age"
+        android:id="@+id/ll_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -73,12 +74,12 @@
         android:layout_below="@+id/ll_email">
 
         <TextView
-            android:id="@+id/tv_age"
+            android:id="@+id/tv_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="2dp"
-            android:text="Age"
+            android:text="Password"
             android:textColor="#FFF"
             android:textSize="20dp" />
 
@@ -87,9 +88,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Input Your Age"
+            android:hint="Input Your Password"
+            android:inputType="textPassword"
             android:textColor="#FFF"
             android:textColorHint="#FFF" />
     </LinearLayout>
+
 
 </RelativeLayout>
