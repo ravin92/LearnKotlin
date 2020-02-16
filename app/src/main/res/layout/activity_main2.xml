@@ -33,6 +33,51 @@
             android:textColor="#FFF"
             android:textColorHint="#FFF" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@+id/ll_name">
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:text="Gender"
+            android:textColor="#FFF"
+            android:textSize="20dp"/>
+
+        <RadioGroup
+            android:id="@+id/rg_gender_sex_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Male"
+                android:textColor="#FFF"
+                android:textSize="15dp" />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Female"
+                android:textColor="#FFF"
+                android:textSize="15dp" />
+        </RadioGroup>
 
     </LinearLayout>
 
@@ -41,7 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/ll_name">
+        android:layout_below="@+id/ll_gender">
 
         <TextView
             android:id="@+id/tv_email"
@@ -61,7 +106,6 @@
             android:hint="Input Your Email"
             android:textColor="#FFF"
             android:textColorHint="#FFF"/>
-
 
     </LinearLayout>
 
@@ -92,6 +136,40 @@
             android:inputType="textPassword"
             android:textColor="#FFF"
             android:textColorHint="#FFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btnMain2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="0.6"
+        android:layout_below="@+id/ll_password">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="Save"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/btn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:layout_gravity="center_horizontal"
+            android:text="View"/>
+
+        <Button
+            android:id="@+id/btn_resetMain2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="Reset"
+            android:layout_gravity="center_horizontal"/>
+
     </LinearLayout>
 
 
