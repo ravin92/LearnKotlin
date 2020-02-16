@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -38,12 +37,40 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_name">
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:text="Email"
+            android:textColor="#FFF"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Input Your Email"
+            android:textColor="#FFF"
+            android:textColorHint="#FFF" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/ll_age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2"
-        android:layout_below="@+id/ll_name">
+        android:layout_below="@+id/ll_email">
 
         <TextView
             android:id="@+id/tv_age"
@@ -63,8 +90,6 @@
             android:hint="Input Your Age"
             android:textColor="#FFF"
             android:textColorHint="#FFF" />
-
-
     </LinearLayout>
 
 </RelativeLayout>
