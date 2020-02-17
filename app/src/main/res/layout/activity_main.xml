@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main.MainActivity">
     
     <LinearLayout
         android:id="@+id/ll_main_layout"
@@ -18,14 +18,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="2dp"
+            android:textSize="25dp"
             android:textColor="#6dffbf"
             android:padding="30dp"
-            android:text="Login"/>
+            android:text="@string/login"/>
 
         <EditText
             android:id="@+id/et_user_name"
-            android:hint="User Name"
+            android:hint="@string/user_name"
             android:textColor="#6bfff7"
             android:textColorHint="#52afaa"
             android:textAlignment="center"
@@ -34,7 +34,7 @@
 
         <EditText
             android:id="@+id/et_password"
-            android:hint="Password"
+            android:hint="@string/password"
             android:textColor="#6bfff7"
             android:textColorHint="#52afaa"
             android:textAlignment="center"
@@ -51,14 +51,14 @@
 
             <Button
                 android:id="@+id/btn_reset"
-                android:text="Reset"
+                android:text="@string/reset"
                 android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <Button
                 android:id="@+id/btn_submit"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -74,7 +74,7 @@
 
             <Button
                 android:id="@+id/btn_next"
-                android:text="Save"
+                android:text="@string/save"
                 android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -86,7 +86,7 @@
                 android:orientation="vertical"
                 android:padding="25dp"
                 android:textStyle="bold"
-                android:text="Sign Up"
+                android:text="@string/sign_up"
                 android:textSize="15dp" />
 
         </LinearLayout>

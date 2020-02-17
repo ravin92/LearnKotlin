@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">PMI Indonesia</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="gender">Gender</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="reset">Reset</string>
+    <string name="submit">Submit</string>
+    <string name="save">Save</string>
+    <string name="user_name">User Name</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="view">View</string>
+    <string name="update">Update</string>
 </resources>
