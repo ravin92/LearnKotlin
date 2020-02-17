@@ -26,12 +26,12 @@ class ModelRegistration {
 
 
 
-/*    constructor(name:String,gender:String,email:String,password:String){
+    constructor(name:String,gender:String,email:String,password:String){
         this.name = name
         this.gender = gender
         this.email = email
         this.password = password
-    }*/
+    }
 
 
 }
