@@ -1,7 +1,9 @@
-package com.example.pmiindonesia
+package com.example.pmiindonesia.Main
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pmiindonesia.R
 
 class Main2Activity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package Model
+package com.example.pmiindonesia.Model
 
 class ModelRegistration {
     var name : String = ""
@@ -26,11 +26,12 @@ class ModelRegistration {
 
 
 
-    constructor(name:String,email:String,password:String){
+/*    constructor(name:String,gender:String,email:String,password:String){
         this.name = name
+        this.gender = gender
         this.email = email
         this.password = password
-    }
+    }*/
 
 
 }

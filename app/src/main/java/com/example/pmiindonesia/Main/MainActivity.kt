@@ -1,6 +1,5 @@
-package com.example.pmiindonesia
+package com.example.pmiindonesia.Main
 
-import ModelUser
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +8,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.pmiindonesia.Database.Database
+import com.example.pmiindonesia.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,8 +34,9 @@ class MainActivity : AppCompatActivity() {
             val user_name = et_user_name.text
             val password = et_password.text
 
-            val dbHandler = Database(this, null)
-            dbHandler.addName(ModelUser(user_name.toString()))
+            val dbHandler =
+                Database(this, null)
+            dbHandler.addName(com.example.pmiindonesia.Model.ModelUser(user_name.toString()))
 
 
 
@@ -44,7 +46,8 @@ class MainActivity : AppCompatActivity() {
         btn_next.setOnClickListener(View.OnClickListener {
             /*  intent = Intent(this,Main2Activity::class.java)
             startActivity(intent)*/
-            val dbHandler = Database(this, null)
+            val dbHandler =
+                Database(this, null)
             val cursor = dbHandler.getAllName()
             cursor!!.moveToFirst()
             while (cursor.moveToNext()) {
@@ -55,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         })
 
         tv_signUp.setOnClickListener(View.OnClickListener {
-            intent = Intent(this,Main2Activity::class.java)
+            intent = Intent(this, Main2Activity::class.java)
             startActivity(intent)
         })
 

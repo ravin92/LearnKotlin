@@ -1,3 +1,5 @@
+package com.example.pmiindonesia.Model
+
 class ModelUser {
 
     var id: Int = 0

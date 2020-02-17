@@ -1,6 +1,5 @@
-package com.example.pmiindonesia
+package com.example.pmiindonesia.Database
 
-import ModelUser
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
@@ -9,8 +8,11 @@ import android.database.sqlite.SQLiteOpenHelper
 
 class Database(context: Context,
                            factory: SQLiteDatabase.CursorFactory?) :
-    SQLiteOpenHelper(context, DATABASE_NAME,
-        factory, DATABASE_VERSION) {
+    SQLiteOpenHelper(context,
+        DATABASE_NAME,
+        factory,
+        DATABASE_VERSION
+    ) {
     override fun onCreate(db: SQLiteDatabase) {
         val CREATE_PRODUCTS_TABLE = ("CREATE TABLE " +
                 TABLE_NAME + "("
@@ -23,7 +25,7 @@ class Database(context: Context,
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME)
         onCreate(db)
     }
-    fun addName(name: ModelUser) {
+    fun addName(name: com.example.pmiindonesia.Model.ModelUser) {
         val values = ContentValues()
         values.put(COLUMN_NAME, name.userName)
         val db = this.writableDatabase
