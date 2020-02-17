@@ -36,7 +36,7 @@ class Database(context: Context,
     }
     companion object {
         private val DATABASE_VERSION = 1
-        private val DATABASE_NAME = "mindorksName.db"
+        private val DATABASE_NAME = "rav.db"
         val TABLE_NAME = "name"
         val COLUMN_ID = "_id"
         val COLUMN_NAME = "username"
