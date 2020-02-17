@@ -1,6 +1,6 @@
 package com.example.pmiindonesia.Database
 
-import Model.ModelRegistration
+import com.example.pmiindonesia.Model.ModelRegistration
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
@@ -17,6 +17,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,
         private val KEY_GENDER = "gender"
         private val KEY_EMAIL = "email"
         private val KEY_PASSWORD = "password"
+
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -52,32 +53,36 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,
 
     //method to read data
     fun viewEmployee():List<ModelRegistration>{
-        val rgsList:ArrayList<ModelRegistration> = ArrayList<ModelRegistration>()
-        val selectQuery = "SELECT  * FROM $TABLE_CONTACTS"
-        val db = this.readableDatabase
-        var cursor: Cursor? = null
-        try{
-            cursor = db.rawQuery(selectQuery, null)
-        }catch (e: SQLiteException) {
-            db.execSQL(selectQuery)
-            return ArrayList()
-        }
-        var userName: String
-        var userGender: String
-        var userEmail: String
-        var userPassword : String
-        if (cursor.moveToFirst()) {
-            do {
-                userName = cursor.getString(cursor.getColumnIndex("name"))
-                userGender = cursor.getString(cursor.getColumnIndex("gender"))
-                userEmail = cursor.getString(cursor.getColumnIndex("email"))
-                userPassword = cursor.getString(cursor.getColumnIndex("password"))
-                val rgs = ModelRegistration()
-                //val rgs= ModelRegistration(userName = userName, userGender = userGender, userEmail = userEmail,userPassword = userPassword)
-                rgsList.add(rgs)
-            } while (cursor.moveToNext())
-        }
-        return rgsList
+            val rgsList:ArrayList<ModelRegistration> = ArrayList<ModelRegistration>()
+            val selectQuery = "SELECT  * FROM $TABLE_CONTACTS"
+            val db = this.readableDatabase
+            var cursor: Cursor? = null
+            try{
+                cursor = db.rawQuery(selectQuery, null)
+            }catch (e: SQLiteException) {
+                db.execSQL(selectQuery)
+                return ArrayList()
+            }
+/*            var userName: String
+            var userGender: String
+            var userEmail: String
+            var userPassword : String*/
+            if (cursor.moveToFirst()) {
+                do {
+                    /*userName = cursor.getString(cursor.getColumnIndex("name"))
+                    userGender = cursor.getString(cursor.getColumnIndex("gender"))
+                    userEmail = cursor.getString(cursor.getColumnIndex("email"))
+                    userPassword = cursor.getString(cursor.getColumnIndex("password"))*/
+                    val rgs= ModelRegistration(
+                        userName = userName,
+                        userGender = userGender,
+                        userEmail = userEmail,
+                        userPassword = userPassword
+                    )
+                    rgsList.add(rgs)
+                } while (cursor.moveToNext())
+            }
+            return rgsList
     }
     //method to update data
     fun updateEmployee(rgs: ModelRegistration): Any {
