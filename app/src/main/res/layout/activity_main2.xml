@@ -36,6 +36,36 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/ll_password">
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:text="@string/id"
+            android:textColor="#FFF"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Input Your ID"
+            android:textColor="#FFF"
+            android:textColorHint="#FFF" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/ll_gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -157,7 +187,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="0.8"
-        android:layout_below="@+id/ll_password">
+        android:layout_below="@+id/ll_id">
 
         <Button
             android:id="@+id/btn_save"
