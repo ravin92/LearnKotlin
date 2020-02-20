@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.example.pmiindonesia.Model.ModelRegistration
+import java.sql.SQLException
 
 class DatabaseHandlerTest(context: Context,name:String?,factory: SQLiteDatabase.CursorFactory?,version: Int) :
     SQLiteOpenHelper(context,DATABSE_NAME,factory,DATABASE_VERSION){
@@ -81,6 +82,16 @@ class DatabaseHandlerTest(context: Context,name:String?,factory: SQLiteDatabase.
         return result
     }
 
+    private fun checkDb():Boolean{
+        var db:SQLiteDatabase? = null
+        try {
+            db = SQLiteDatabase.openDatabase(dbPath + DATABSE_NAME,null,SQLiteDatabase.OPEN_READONLY)
+        }catch (e:SQLException){ }
+        return db !=null
+    }
+
+    //https://discuss.kotlinlang.org/t/how-to-use-pre-populated-sqlite-database-using-kotlin/8068/3
+
     //constractor path db
     fun DatabaseHandlerTest(context: Context,databasePath: DatabasePath){
         //path belum kelar
@@ -90,6 +101,7 @@ class DatabaseHandlerTest(context: Context,name:String?,factory: SQLiteDatabase.
         private val DATABASE_VERSION = 1
         private val DATABSE_NAME = "regisDB.db"
         val TABLE_REGIS = "registration"
+        val dbPath = "/Android/data/com.example.pmiindonesia/regisDB.db/"
 
 
         val COLUMN_ID ="id"
